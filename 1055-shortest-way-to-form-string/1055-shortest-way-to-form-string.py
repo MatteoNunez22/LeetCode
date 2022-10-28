@@ -8,9 +8,9 @@ class Solution:
                 order[source[i]] = [i]
             
         def getNextIndex(array, value):
-            for k in range(len(array)):
-                if array[k] > value:
-                    return array[k]
+            for num in array:
+                if num > value:
+                    return num
             else:
                 return -1
           
