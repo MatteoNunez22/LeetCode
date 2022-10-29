@@ -7,13 +7,12 @@ class Solution:
         maxProfit = 0
         low = 0
         high = 1
-        for i in range(1, n):
-            if prices[i] > prices[low]:
-                high = i
+        while high < n:
+            if prices[high] > prices[low]:
                 maxProfit = max(prices[high] - prices[low], maxProfit)
-            elif prices[i] < prices[low]:
-                low = i
-                high = i
+            elif prices[high] < prices[low]:
+                low = high
+            high += 1
         
         return maxProfit
             
