@@ -13,7 +13,8 @@ class Solution:
         while len(stack) > 0:
             visit = stack.pop()
             if visit[0]:
-                maxdepth = max(visit[1], maxdepth)
+                if visit[1] > maxdepth:
+                    maxdepth = max(visit[1], maxdepth)
                 if visit[0].left:
                     stack.append((visit[0].left,visit[1]+1))
                 if visit[0].right:
