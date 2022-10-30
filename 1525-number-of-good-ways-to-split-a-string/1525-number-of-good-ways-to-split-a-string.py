@@ -1,19 +1,8 @@
 class Solution:
     def numSplits(self, s: str) -> int:
-        left = set()
-        num_left = []
-        # for i in range(len(s)-1):
-        #     if not s[i] in left:
-        #         left.add(s[i])
-        #     num_left.append(len(left))
-        
-        right = set()
-        num_right = []
-        # for i in range(len(s)-1,0,-1):
-        #     if not s[i] in right:
-        #         right.add(s[i])
-        #     num_right.append(len(right))
-            
+        left, right = set(), set()
+        num_left, num_right = [], []
+
         for i in range(len(s)-1):
             if not s[i] in left:
                 left.add(s[i])
