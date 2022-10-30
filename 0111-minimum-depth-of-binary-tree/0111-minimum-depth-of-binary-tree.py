@@ -19,5 +19,3 @@ class Solution:
                     queue.append((visit[0].left, visit[1]+1))
                 if visit[0].right:
                     queue.append((visit[0].right, visit[1]+1))
-        
-        return -1
