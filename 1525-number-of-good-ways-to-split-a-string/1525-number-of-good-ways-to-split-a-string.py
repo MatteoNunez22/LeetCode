@@ -11,10 +11,10 @@ class Solution:
                 right.add(s[len(s)-1-i])
             num_right.append(len(right))
         
-        # num_right = num_right[::-1]
+        num_right = num_right[::-1]
         good_splits = 0
-        for j in range(len(s)-1):
-            if num_left[j] == num_right[-(1+j)]:
+        for i in range(len(s)-1):
+            if num_right[i] == num_left[i]:
                 good_splits += 1
                 
         return good_splits
