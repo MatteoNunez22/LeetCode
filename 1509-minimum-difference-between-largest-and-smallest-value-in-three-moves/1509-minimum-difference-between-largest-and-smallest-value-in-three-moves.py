@@ -4,7 +4,6 @@ class Solution:
             return 0
         
         nums.sort()
-        print(nums)
         min_diff = float('inf')
         w_len = len(nums)-3
         
