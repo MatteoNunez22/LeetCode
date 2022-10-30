@@ -12,7 +12,7 @@ class Solution:
         queue = [(root, 1)]
         while len(queue) > 0:
             visit = queue.pop(0)
-            if visit:
+            if visit[0]:
                 if visit[0].left is None and visit[0].right is None:
                     return visit[1]
                 if visit[0].left:
