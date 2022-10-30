@@ -11,6 +11,7 @@ class Solution:
         for i in range(1,4):
             window = nums[i:i+w_len]
             min_diff = min(min_diff, window[-1]-window[0])
+            min_diff = min(min_diff, nums[i+w_len-1]-nums[i])
             window = nums[-i-w_len:-i]
             min_diff = min(min_diff, window[-1]-window[0])
         
