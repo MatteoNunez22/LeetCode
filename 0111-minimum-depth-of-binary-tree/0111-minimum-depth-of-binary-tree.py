@@ -15,7 +15,5 @@ class Solution:
             if visit[0]:
                 if visit[0].left is None and visit[0].right is None:
                     return visit[1]
-                if visit[0].left:
-                    queue.append((visit[0].left, visit[1]+1))
-                if visit[0].right:
-                    queue.append((visit[0].right, visit[1]+1))
+                queue.append((visit[0].left, visit[1]+1))
+                queue.append((visit[0].right, visit[1]+1))
