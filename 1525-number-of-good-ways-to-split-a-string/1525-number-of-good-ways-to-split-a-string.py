@@ -1,28 +1,24 @@
 class Solution:
     def numSplits(self, s: str) -> int:
-        n = len(s)
-        left = []
-        right = []
+        left = set()
+        num_left = []
+        for i in range(len(s)-1):
+            if not s[i] in left:
+                left.add(s[i])
+            num_left.append(len(left))
         
-        freq1 = {}
-        freq2 = {}
-        for i in range(n-1):
-            if s[i] in freq1:
-                freq1[s[i]] += 1
-            else:
-                freq1[s[i]] = 1
-            left.append(len(freq1))
-            
-            if s[n-1-i] in freq2:
-                freq2[s[n-1-i]] += 1
-            else:
-                freq2[s[n-1-i]] = 1
-            right.insert(0, len(freq2))
+        right = set()
+        num_right = []
+        for i in range(len(s)-1,0,-1):
+            if not s[i] in right:
+                right.add(s[i])
+            num_right.append(len(right))
         
-        count = 0
-        for i in range(n-1):
-            if left[i] == right[i]:
-                count += 1
-        return count
+        num_right = num_right[::-1]
         
-            
+        good_splits = 0
+        for i in range(len(s)-1):
+            if num_right[i] == num_left[i]:
+                good_splits += 1
+                
+        return good_splits
