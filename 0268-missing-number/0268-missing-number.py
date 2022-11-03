@@ -1,7 +1,12 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        present = set(range(len(nums)+1))
-        for num in nums:
-            present.remove(num)
+        res = 0
+        n = len(nums)
+        
+        for i in range(n+1):
+            res += i
+        
+        for i in range(n):
+            res -= nums[i]
             
-        return present.pop()
+        return res
