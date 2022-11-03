@@ -4,7 +4,9 @@ class Solution:
         
         n = len(nums)
         res += n
+        
         for i in range(n):
-            res += i - nums[i]
+            res += i
+            res -= nums[i]
             
         return res
