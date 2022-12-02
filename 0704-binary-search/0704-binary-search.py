@@ -5,11 +5,11 @@ class Solution:
         
         while start<=end:
             middle = start + (end - start)//2
-            if nums[middle] == target:
-                return middle
-            elif nums[middle] < target:
+            if nums[middle] < target:
                 start = middle + 1
-            else:
+            elif nums[middle] > target:
                 end = middle - 1
-                
+            else:
+                return middle
+            
         return -1
