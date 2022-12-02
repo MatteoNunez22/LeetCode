@@ -3,7 +3,7 @@ class Solution:
         start = 0
         end = len(nums) - 1
         
-        while start<=end:
+        while start <= end:
             middle = start + (end - start)//2
             if nums[middle] < target:
                 start = middle + 1
