@@ -3,13 +3,11 @@ class Solution:
         if len(s) != len(t):
             return False
 
-        
         s = list(s)
         t = list(t)
-        
-        for char in t:
-            if not char in s:
-                return False
-            s.remove(char)
+        s.sort()
+        t.sort()
+        print(s)
+        print(t)
             
-        return len(s) == 0
+        return s == t
