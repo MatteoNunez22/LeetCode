@@ -7,7 +7,5 @@ class Solution:
         t = list(t)
         s.sort()
         t.sort()
-        print(s)
-        print(t)
-            
+
         return s == t
