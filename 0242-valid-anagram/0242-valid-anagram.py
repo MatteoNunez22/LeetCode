@@ -13,14 +13,8 @@ class Solution:
         # Approach 2: O(n)
         hashmap = {}
         for i in range(len(t)):
-            if t[i] in hashmap:
-                hashmap[t[i]] += 1
-            else:
-                hashmap[t[i]] = 1
-            if s[i] in hashmap:
-                hashmap[s[i]] -= 1
-            else:
-                hashmap[s[i]] = -1
+            hashmap[t[i]] = hashmap.get(t[i], 0) + 1
+            hashmap[s[i]] = hashmap.get(s[i], 0) - 1
         for char in hashmap:
             if hashmap[char] != 0:
                 return False
