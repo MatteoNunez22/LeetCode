@@ -4,7 +4,10 @@ class Solution:
         hashmap = {}
         
         for word in strs:
-            key = tuple(sorted(word))
+            word_list = list(word)
+            word_list.sort()
+            key = ''.join(word_list)
+            
             if key in hashmap:
                 hashmap[key] = hashmap[key] + [word]
             else:
