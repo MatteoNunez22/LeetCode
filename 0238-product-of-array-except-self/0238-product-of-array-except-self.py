@@ -24,13 +24,13 @@ class Solution:
         
         output = [1] * N
         prefix = 1
-        for i in range(1, N):
-            prefix *= nums[i-1]
+        for i in range(0, N):
             output[i] = prefix
+            prefix *= nums[i]
         
         suffix = 1
-        for i in range(N-2, -1, -1):
-            suffix *= nums[i+1]
+        for i in range(N-1, -1, -1):
             output[i] *= suffix
+            suffix *= nums[i]
             
         return output
