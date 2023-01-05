@@ -18,7 +18,6 @@ class Solution:
             count = [0] * 26
             for c in word:
                 count[ord(c) - ord('a')] += 1
-                
             key = tuple(count)
             if key in hashmap:
                 hashmap[key] = hashmap[key] + [word]
