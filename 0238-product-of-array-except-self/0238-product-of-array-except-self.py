@@ -1,6 +1,6 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        # Approach 1: O(N)
+        # Approach 1: O(N) / O(N) space
         # N = len(nums)
         # left = [1] * (N)
         # prefix = 1
@@ -19,18 +19,18 @@ class Solution:
         #     output[i] = left[i] * right[i]
         # return output
         
-        # Approach 2: O(N)
+        # Approach 2: O(N) / O(1) space
         N = len(nums)
         
         output = [1] * N
         prefix = 1
         for i in range(1, N):
-            output[i] = prefix * nums[i-1]
-            prefix = output[i]
+            prefix *= nums[i-1]
+            output[i] = prefix
         
         suffix = 1
         for i in range(N-2, -1, -1):
-            output[i] *= suffix * nums[i+1]
-            suffix = suffix * nums[i+1]
+            suffix *= nums[i+1]
+            output[i] *= suffix
             
         return output
