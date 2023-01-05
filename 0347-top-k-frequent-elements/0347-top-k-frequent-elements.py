@@ -24,8 +24,6 @@ class Solution:
         bucket = [[] for i in range(len(nums)+1)]
         for n, c in count.items():
             bucket[c].append(n)
-        print(bucket)
-        
         answer = []
         for n_list in bucket[::-1]:
             if n_list:
@@ -33,6 +31,5 @@ class Solution:
                     answer.append(n)
                     if len(answer) == k:
                         return answer
-        return answer
     
         
