@@ -21,8 +21,8 @@ class Solution:
         
         # Approach 2: O(N) / O(1) space
         N = len(nums)
-        
         output = [1] * N
+        
         prefix = 1
         for i in range(0, N):
             output[i] = prefix
