@@ -8,7 +8,7 @@ class Solution:
         
         numsSet = set(nums)
         
-        max_count = 1
+        max_count = 0
         for n in nums:
             if n-1 not in numsSet:
                 count = 0
