@@ -19,9 +19,9 @@ class Codec:
                 n = n + s[idx]
                 idx += 1
             idx += 1 
-            num = int(n)
-            strs.append(s[idx:idx+num])
-            idx += num
+            end = idx + int(n)
+            strs.append(s[idx:end])
+            idx = end
         return strs
 
 
