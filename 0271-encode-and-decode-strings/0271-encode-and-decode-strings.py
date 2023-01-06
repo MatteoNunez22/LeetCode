@@ -5,8 +5,7 @@ class Codec:
         encoded_string = ""
         for string in strs:
             n = len(string)
-            encoded_string = encoded_string + str(n) + '#' + string
-        print(encoded_string)
+            encoded_string += str(n) + '#' + string
         return encoded_string
 
     def decode(self, s: str) -> List[str]:
@@ -21,10 +20,8 @@ class Codec:
                 idx += 1
             idx += 1 
             num = int(n)
-            print(idx, num)
             strs.append(s[idx:idx+num])
             idx += num
-        
         return strs
 
 
