@@ -8,7 +8,7 @@ class Solution:
         }
         
         for c in s:
-            if c in "([{":
+            if c in pair:
                 stack.append(c)
             else:
                 if len(stack) == 0 or pair[stack.pop(-1)] != c:
