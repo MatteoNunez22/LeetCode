@@ -1,12 +1,8 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        if len(nums) == 3:
-            if nums[0] + nums[1] + nums[2] == 0:
-                return [nums]
-            else:
-                return []
         res = []
         nums.sort()
+        
         for i, n in enumerate(nums):
             if i > 0 and n == nums[i - 1]:
                 continue
