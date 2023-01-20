@@ -2,8 +2,7 @@ class Solution:
     def maxArea(self, height: List[int]) -> int:
         res = 0
         
-        l = 0
-        r = len(height) - 1
+        l, r = 0, len(height) - 1
         
         while l < r:
             water = min(height[l], height[r]) * (r - l)
