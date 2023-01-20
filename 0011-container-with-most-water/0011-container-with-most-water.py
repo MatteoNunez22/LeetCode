@@ -13,7 +13,7 @@ class Solution:
             # print(f"water area: {water}")
             res = max(water, res)
             
-            if height[l] < height[r]:
+            if height[l] <= height[r]:
                 l += 1
             else:
                 r -= 1
