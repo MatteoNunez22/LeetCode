@@ -7,10 +7,6 @@ class Solution:
         
         while l < r:
             water = min(height[l], height[r]) * (r - l)
-            # print(f"res: {res}")
-            # print(f"(l, r): {l}, {r}")
-            # print(f"height(l, r): {height[l]}, {height[r]}")
-            # print(f"water area: {water}")
             res = max(water, res)
             
             if height[l] <= height[r]:
