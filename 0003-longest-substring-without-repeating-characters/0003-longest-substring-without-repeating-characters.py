@@ -1,6 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        # My method
+        # My method: O(n), O(n)
         # res = 0
         # char_map = {}
         # l = 0
@@ -11,7 +11,7 @@ class Solution:
         #     res = max(res, r - l + 1)
         # return res
             
-        # Neetcode's method
+        # Neetcode's method: O(n), O(n)
         res = 0
         char_set = set()
         
