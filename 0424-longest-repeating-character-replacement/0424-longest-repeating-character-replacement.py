@@ -21,7 +21,6 @@ class Solution:
             count[s[r]] = count.get(s[r], 0) + 1
             maxfreq = max(maxfreq, count[s[r]])
             while (r - l + 1) - k > maxfreq:
-                print(l, r)
                 count[s[l]] -= 1
                 l += 1
             res = max(res, r - l + 1)
