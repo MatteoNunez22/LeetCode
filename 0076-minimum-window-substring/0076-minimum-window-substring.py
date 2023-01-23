@@ -4,11 +4,8 @@ class Solution:
             return ""
         
         res = ""
-        minLength = len(s)
-        
-        tCount = {}
-        sCount = {}
-        matches = 0
+        sCount, tCount = {}, {}
+        matches, minLength = 0, len(s)
         
         for i in range(len(t)):
             tCount[t[i]] = tCount.get(t[i], 0) + 1
@@ -27,8 +24,8 @@ class Solution:
                     l += 1
 
                 # Check substring length
-                if len(s[l:r+1]) <= minLength:
-                    minLength = len(s[l:r+1])
+                if (r - l + 1) <= minLength:
+                    minLength = (r - l + 1)
                     res = s[l:r+1]
             
                 # Move pointers
