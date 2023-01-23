@@ -17,12 +17,12 @@ class Solution:
         for r in range(len(s)):
             # Complete substring
             sCount[s[r]] = sCount.get(s[r], 0) + 1
-            if s[r] in tCount and sCount[s[r]] == tCount[s[r]]:
+            if s[r] in t and sCount[s[r]] == tCount[s[r]]:
                 matches += 1
             if matches == len(tCount):
                 # Minimize substring
-                while s[l] not in tCount or sCount[s[l]] > tCount[s[l]]:
-                    if s[l] in tCount:
+                while s[l] not in t or sCount[s[l]] > tCount[s[l]]:
+                    if s[l] in t:
                         sCount[s[l]] -= 1
                     l += 1
 
