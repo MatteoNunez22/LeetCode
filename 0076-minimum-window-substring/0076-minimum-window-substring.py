@@ -17,7 +17,8 @@ class Solution:
         for r in range(len(s)):
             # print(f"sub: {s[l:r+1]}")
             # Complete substring
-            sCount[s[r]] = sCount.get(s[r], 0) + 1
+            if s[r] in t:
+                sCount[s[r]] = sCount.get(s[r], 0) + 1
             if s[r] in t and sCount[s[r]] == tCount[s[r]]:
                 matches += 1
             # print(f"matches: {matches}")
