@@ -11,13 +11,10 @@ class Solution:
             for pile in piles:
                 hours += ceil(pile/k)
                 
-            print(l, r, k)
-            print(hours)
-                
             if hours > h:
                 l = k + 1
             else:
-                r = k - 1
                 res = min(res, k)
+                r = k - 1
             
         return res
