@@ -1,9 +1,8 @@
 class Solution:
     def findMin(self, nums: List[int]) -> int:
+        # My method: O(log(n))
         # if len(nums) == 1:
         #     return nums[0]
-        
-        # My method: O(log(n))
         # l, r = 0, len(nums) - 1
         # while l <= r and nums[l] > nums[r]:
         #     mid = l + (r - l) // 2
