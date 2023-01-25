@@ -7,7 +7,6 @@ class Solution:
         
         while l <= r and nums[l] > nums[r]:
             mid = l + (r - l) // 2
-            print(l, r, mid)
             
             if nums[mid] > nums[l]:
                 l = mid
