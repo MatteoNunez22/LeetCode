@@ -18,8 +18,6 @@ class Solution:
             else:
                 r = mid - 1
                 
-        print("Pivot: ", pivot)
-                
         if pivot == 0:
             l, r = 0, len(nums) - 1
         elif nums[0] <= target <= nums[pivot - 1]:
@@ -28,8 +26,6 @@ class Solution:
             l, r = pivot, len(nums) - 1
         else:
             return -1
-        
-        print(l, r)
             
         while l <= r:
             mid = l + (r - l) // 2
