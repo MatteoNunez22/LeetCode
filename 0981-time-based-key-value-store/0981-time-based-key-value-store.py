@@ -15,11 +15,14 @@ class TimeMap:
         
         while l <= r:
             mid = l + (r - l) // 2
-            if values[mid][0] <= timestamp:
+            
+            if values[mid][0] < timestamp:
                 res = values[mid][-1]
                 l = mid + 1
-            else:
+            elif values[mid][0] > timestamp:
                 r = mid - 1
+            else:
+                return values[mid][-1]
         return res
 
 # Your TimeMap object will be instantiated and called as such:
