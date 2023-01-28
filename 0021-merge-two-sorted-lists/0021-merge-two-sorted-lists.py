@@ -10,28 +10,24 @@ class Solution:
         elif list2 is None:
             return list1
         
-        head = list1 if list1.val <= list2.val else list2
-        
-        prev = None
+        head = ListNode()
+        prev = head
         curr1, curr2 = list1, list2
         while curr1 and curr2:
             if curr1.val <= curr2.val:
-                if prev:
-                    prev.next = curr1
+                prev.next = curr1
                 prev = curr1
                 curr1 = curr1.next
             else:
-                if prev:
-                    prev.next = curr2
+                prev.next = curr2
                 prev = curr2
                 curr2 = curr2.next
         
-        if prev:
-            if curr1 is None:
-                prev.next = curr2 
-            elif curr2 is None:
-                prev.next = curr1
+        if curr1 is None:
+            prev.next = curr2 
+        elif curr2 is None:
+            prev.next = curr1
         
-        return head
+        return head.next
         
         
