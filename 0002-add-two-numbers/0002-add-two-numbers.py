@@ -9,7 +9,7 @@ class Solution:
         carry = 0
         start = ListNode(0)
         currNode = start
-        while l1 or l2:
+        while l1 or l2 or carry:
             val1 = l1.val if l1 else 0
             val2 = l2.val if l2 else 0
             
@@ -25,9 +25,5 @@ class Solution:
             if l2:
                 l2 = l2.next
             currNode = currNode.next
-            
-        if carry:
-            newNode = ListNode(carry)
-            currNode.next = newNode
             
         return start.next
