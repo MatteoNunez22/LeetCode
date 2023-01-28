@@ -12,21 +12,20 @@ class Solution:
         
         head = ListNode()
         prev = head
-        curr1, curr2 = list1, list2
-        while curr1 and curr2:
-            if curr1.val <= curr2.val:
-                prev.next = curr1
-                prev = curr1
-                curr1 = curr1.next
+        while list1 and list2:
+            if list1.val <= list2.val:
+                prev.next = list1
+                prev = list1
+                list1 = list1.next
             else:
-                prev.next = curr2
-                prev = curr2
-                curr2 = curr2.next
+                prev.next = list2
+                prev = list2
+                list2 = list2.next
         
-        if curr1 is None:
-            prev.next = curr2 
-        elif curr2 is None:
-            prev.next = curr1
+        if list1 is None:
+            prev.next = list2 
+        elif list2 is None:
+            prev.next = list1
         
         return head.next
         
