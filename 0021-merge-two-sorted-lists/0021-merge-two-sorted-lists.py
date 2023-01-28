@@ -13,7 +13,7 @@ class Solution:
         head = ListNode()
         prev = head
         while list1 and list2:
-            if list1.val <= list2.val:
+            if list1.val < list2.val:
                 prev.next = list1
                 prev = list1
                 list1 = list1.next
