@@ -12,10 +12,13 @@ class Solution:
         while l1 or l2:
             val1 = l1.val if l1 else 0
             val2 = l2.val if l2 else 0
+            
+            # Calculate value
             value = val1 + val2 + carry
             carry = value // 10
             newNode = ListNode(value % 10)
             currNode.next = newNode
+            
             # Update pointers
             if l1:
                 l1 = l1.next
