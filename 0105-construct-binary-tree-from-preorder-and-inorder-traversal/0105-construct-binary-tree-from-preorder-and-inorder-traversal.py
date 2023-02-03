@@ -9,9 +9,6 @@ class Solution:
         if not preorder or not inorder:
             return None
         
-        if len(preorder) == 1:
-            node = TreeNode(preorder[0])
-            return node
         
         root = TreeNode(preorder[0])
         mid = inorder.index(root.val)
