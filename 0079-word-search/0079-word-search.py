@@ -20,7 +20,7 @@ class Solution:
         
         for r in range(ROWS):
             for c in range(COLS):
-                if search(r, c, 0):
+                if board[r][c] == word[0] and search(r, c, 0):
                     return True
                 
         return False
