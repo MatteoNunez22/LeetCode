@@ -10,9 +10,7 @@ class Solution:
             if total > target or i >= len(candidates):
                 return
             
-            curr.append(candidates[i])
-            combinations(i, curr, total + candidates[i])
-            curr.pop()
+            combinations(i, curr + [candidates[i]], total + candidates[i])
             combinations(i + 1, curr, total)
             
         combinations(0, [], 0)
