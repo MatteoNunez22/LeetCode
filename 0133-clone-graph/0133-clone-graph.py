@@ -21,8 +21,7 @@ class Solution:
             copyMap[node.val] = copy
             
             for n in node.neighbors:
-                neighbor = build(n)
-                copy.neighbors.append(neighbor)
+                copy.neighbors.append(build(n))
                 
             return copy
                    
