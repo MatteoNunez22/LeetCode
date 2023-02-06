@@ -21,9 +21,9 @@ class Solution:
             for i, pre in enumerate(reqMap[course]):
                 if not complete(pre):
                     return False
-                else:
-                    reqMap[course].pop(i)
+                    
             visitSet.remove(course)
+            reqMap[course] = []
                     
             return True
         
