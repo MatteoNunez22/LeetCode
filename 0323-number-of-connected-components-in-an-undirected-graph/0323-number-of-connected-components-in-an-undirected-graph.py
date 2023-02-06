@@ -1,12 +1,13 @@
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        # O(V + E), O(V + E)
         if n == 1:
             return 1
         
         if len(edges) == 1:
             return n - 1
         
-        adjMap = collections.defaultdict(list)
+        adjMap = [[] for i in range(n)]
         
         for a, b in edges:
             adjMap[a].append(b)
