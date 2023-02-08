@@ -2,8 +2,7 @@ class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         n = len(nums)
         
-        if n == 1:
-            return 1
+        if n == 1: return 1
         
         dp = [1] * n
         res = 1
