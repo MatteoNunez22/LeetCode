@@ -8,13 +8,12 @@ class Solution:
         if n == 2:
             return max(nums[0], nums[1])
         
-        maxLoot = [0] * n
-        maxLoot[0] = nums[0]
-        maxLoot[1] = max(nums[0], nums[1])
+        loot1, loot2 = nums[0], max(nums[0], nums[1])
         
         for i in range(2, n):
-            maxLoot[i] = max(nums[i] + maxLoot[i-2], maxLoot[i-1])
+            maxLoot = max(nums[i] + loot1, loot2)
+            loot1 = loot2
+            loot2 = maxLoot
         
-        
-        return maxLoot[-1]
+        return maxLoot
     
