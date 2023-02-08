@@ -2,8 +2,8 @@ class Solution:
     def numDecodings(self, s: str) -> int:
         n = len(s)
         
-        if n == 1:
-            return 1 if s[0] != "0" else 0
+        # if n == 1:
+        #     return 1 if s[0] != "0" else 0
         
         countMap = { n : 1 }
         
