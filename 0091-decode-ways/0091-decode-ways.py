@@ -15,7 +15,7 @@ class Solution:
                 return 0
             
             count = ways(idx + 1)
-            if idx + 1 < n and int(s[idx:idx+2]) <= 26:
+            if idx + 1 < n and int(s[idx] == "1" or s[idx] == "2" and s[idx+1] in "0123456"):
                 count += ways(idx + 2)
             
             countMap[idx] = count
