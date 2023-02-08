@@ -20,5 +20,4 @@ class Solution:
             if dp[i] > res:
                 res = dp[i]
         
-        print(dp)
         return res
