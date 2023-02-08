@@ -28,7 +28,6 @@ class Solution:
                     dp[i] = True
                     break
                 dp[i] = False
-        print(dp)
             
         return dp[0]
         
