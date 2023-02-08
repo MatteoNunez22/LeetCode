@@ -7,7 +7,7 @@ class Solution:
         dp = [1] * n
         res = 1
         
-        for i in range(n-2, -1, -1):
+        for i in range(n-1, -1, -1):
             maxLength = 0
             for j in range(i+1, n):
                 minNum = float("inf")
