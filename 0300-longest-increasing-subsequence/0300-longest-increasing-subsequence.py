@@ -5,7 +5,6 @@ class Solution:
         if n == 1: return 1
         
         dp = [1] * n
-        res = 1
         
         for i in range(n-1, -1, -1):
             maxLength = 0
@@ -16,7 +15,5 @@ class Solution:
                     if dp[j] + 1 > maxLength:
                         maxLength = dp[j]
             dp[i] = maxLength + 1
-            if dp[i] > res:
-                res = dp[i]
         
-        return res
+        return max(dp)
