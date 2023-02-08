@@ -1,5 +1,6 @@
 class Solution:
     def numDecodings(self, s: str) -> int:
+        # O(n), O(n)
         n = len(s)
         
         if n == 1:
@@ -15,7 +16,7 @@ class Solution:
                 return 0
             
             count = ways(idx + 1)
-            if idx + 1 < n and int(s[idx] == "1" or s[idx] == "2" and s[idx+1] in "0123456"):
+            if idx + 1 < n and int(s[idx:idx+2]) <= 26:
                 count += ways(idx + 2)
             
             countMap[idx] = count
