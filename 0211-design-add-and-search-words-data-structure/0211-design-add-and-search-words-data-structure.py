@@ -28,7 +28,6 @@ class WordDictionary:
                         if dfs(child, i+1):
                             return True
                     return False   
-                
                 else:
                     if c not in curr.children:
                         return False
