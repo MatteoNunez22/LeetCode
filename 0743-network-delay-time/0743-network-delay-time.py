@@ -1,6 +1,6 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
-        
+        # O(E * logV)
         adjList = collections.defaultdict(list)
         
         for u, v, w in times:
