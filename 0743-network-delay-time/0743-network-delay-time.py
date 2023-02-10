@@ -8,18 +8,16 @@ class Solution:
             
         minHeap = [(0, k)]
         visitSet = set()
-        
         res = 0
+        
         while minHeap:
             w1, n1 = heapq.heappop(minHeap)
             if n1 in visitSet:
                 continue
-            
             visitSet.add(n1)
             res = max(res, w1)
-            
             for n2, w2 in adjList[n1]:
                 if n2 not in visitSet:
                     heapq.heappush(minHeap, (w1 + w2, n2))
-        
+            
         return res if len(visitSet) == n else -1
