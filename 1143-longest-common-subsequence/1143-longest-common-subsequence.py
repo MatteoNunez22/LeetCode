@@ -1,5 +1,8 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        if len(text1) < len(text2):
+            text1, text2 = text2, text1
+        
         n, m = len(text1), len(text2)
         botRow = [0] * (m + 1)
         
