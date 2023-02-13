@@ -10,7 +10,7 @@ class Solution:
                 heapq.heappush(heap, x - y)
             
         heap.append(0)
-        return abs(heap[0])
+        return -1 * heap[0]
         # if heap:
         #     return -1 * heap[0]
         # else:
