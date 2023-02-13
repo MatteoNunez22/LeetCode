@@ -39,7 +39,6 @@ class Solution:
             else:
                 last.next = second
                 second = second.next
-            last.next.next = None
             last = last.next
         
         if first:
