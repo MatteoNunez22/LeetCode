@@ -9,7 +9,9 @@ class Solution:
             if x != y:
                 heapq.heappush(heap, x - y)
             
-        if heap:
-            return -1 * heap[0]
-        else:
-            return 0
+        heap.append(0)
+        return abs(heap[0])
+        # if heap:
+        #     return -1 * heap[0]
+        # else:
+        #     return 0
