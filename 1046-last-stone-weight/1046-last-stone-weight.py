@@ -4,11 +4,9 @@ class Solution:
         heapq.heapify(heap)
         
         while len(heap) > 1:
-            x = -1 * heapq.heappop(heap)
-            y = -1 * heapq.heappop(heap)
+            x = heapq.heappop(heap)
+            y = heapq.heappop(heap)
             if x != y:
-                if x > y:
-                    x, y = y, x
                 heapq.heappush(heap, x - y)
             
         if heap:
