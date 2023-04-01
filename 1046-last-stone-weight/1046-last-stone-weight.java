@@ -6,10 +6,10 @@ class Solution {
         }
         
         while (heapq.size() > 1) {
-            int y = -1 * heapq.poll();
-            int x = -1 * heapq.poll();
+            int y = heapq.poll();
+            int x = heapq.poll();
             if (x != y) {
-                heapq.add(x - y);
+                heapq.add(y - x);
             }
         }
         
