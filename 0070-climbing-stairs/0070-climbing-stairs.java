@@ -12,8 +12,7 @@ class Solution {
     public int recClimbStairs(int n, int[] memo) {
         if (memo[n] != 0) return memo[n];
         
-        int ways = recClimbStairs(n-1, memo) + recClimbStairs(n-2, memo);
-        memo[n] = ways;
-        return ways;
+        memo[n] = recClimbStairs(n-1, memo) + recClimbStairs(n-2, memo);
+        return memo[n];
     }
 }
