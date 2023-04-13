@@ -15,14 +15,15 @@ bool containsDuplicate(int* nums, int numsSize){
     for (int i = 0; i < numsSize; i++) {
         HASH_FIND_INT(hash, &nums[i], elem);
 
-        if (!elem) {
+        if (elem) {
+            flag = true;
+            break;
+            
+        } else {
             elem = malloc(sizeof(hash_table));
             elem->key = nums[i];
             HASH_ADD_INT(hash, key, elem);
             flag = false;
-        } else {
-            flag = true;
-            break;
         }
     }
     
