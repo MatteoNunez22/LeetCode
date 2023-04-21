@@ -1,24 +1,24 @@
 bool isPalindrome(char * s){
-    int n = strlen(s);
-    if (n==1) return true;
+    int size = strlen(s);
+    if (size == 1) return true;
     
-    int left = 0;
-    int right = n-1;
+    int l = 0;
+    int r = size - 1;
     
-    while (left < right) {
-        if (isalnum(s[left]) && isalnum(s[right])) {
-            char leftChar = tolower(s[left]);
-            char rightChar = tolower(s[right]);
+    while (l < r) {
+        if (isalnum(s[l]) && isalnum(s[r])) {
+            char c_l = tolower(s[l]);
+            char c_r = tolower(s[r]);
             
-            if (leftChar != rightChar) {
-                return false;
-            }
-            left++;
-            right--;
+            if (c_l != c_r) return false;
+            
+            l++;
+            r--;
         }
         
-        if (!isalnum(s[left])) left++;
-        if (!isalnum(s[right])) right--;
+        if (!isalnum(s[l])) l++;
+        if (!isalnum(s[r])) r--;
+            
     }
     
     return true;
