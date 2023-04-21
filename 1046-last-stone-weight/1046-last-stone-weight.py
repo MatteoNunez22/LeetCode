@@ -10,7 +10,6 @@ class Solution:
             if stone1 != stone2:
                 heapq.heappush(heap, stone1 - stone2)
         
-        if heap:
-            return abs(heap[0])
-        return 0
+        heap.append(0)
+        return abs(heap[0])
                 
