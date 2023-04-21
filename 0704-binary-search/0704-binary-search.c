@@ -5,7 +5,7 @@ int search(int* nums, int numsSize, int target){
     int mid;
     
     while (l <= r) {
-        mid = floor((r + l) / 2);
+        mid = (r + l) / 2;
         if (nums[mid] < target) {
             l = mid + 1;
             
